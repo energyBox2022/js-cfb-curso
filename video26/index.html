@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeo 026 - Utilização do queySelectorAll</title>
+    <script src="script.js"></script>
+
+    <style>
+
+        *{
+            background-color: antiquewhite;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .titulo{
+            color: brown;
+            font-size: 20px;
+            text-decoration: underline;
+        }
+
+        div{
+            border: 1px solid rgb(109, 47, 255);
+            padding: 10px;
+            display: inline-block;
+        }
+
+        a{
+            display: block;
+            padding: 5px;
+            margin-top: 20px;
+        }
+
+    </style>
+
+
+</head>
+
+
+<body>
+
+    <h1 class="titulo">queySelectorAll</h1>
+    <p>O queySelectorAll() é um método que retorna os elementos do documento que correspondem a uma classe de CSS ou a uma tag specífica.</p>
+    <h2 class="titulo">Curso de Javascript</h2>
+    <p>www.youtube.com/cfbcursos</p>
+    <p>cfbcursos.com.br</p>
+    <div>
+        <p>Este texto está dentro de uma div</p>
+        <p>Este também</p>
+    </div>
+    <a href="http://www.youtube.com/cfbcursos" target="_blank">CANAL</a>
+    <a href="http://cfbcursos.com.br">SITE</a>
+
+    <hr>
+
+    <script>
+
+        var ps=document.querySelectorAll("h2");
+        document.write("<br>" + "<br>" +  ps[0].innerHTML + "<br>");
+        
+
+        var ps1=document.querySelectorAll("p");
+        ps1[0].style.color="#00f";
+        document.write("<br>" + "<br>" +  ps1[0].innerHTML + "<br>");
+
+
+
+        var elementos=document.querySelectorAll("p.titulo");
+
+        for(var i=0; i<elementos.length;i++){
+        document.write("<br>" + "<br>" +  elementos[i].innerHTML + "<br>");
+        }
+
+        var elementos=document.querySelectorAll("div > p");
+        for(var i=0; i<elementos.length;i++){
+        elementos[i].style.color="#0a0";
+        }
+
+
+    </script>
+    
+</body>
+
+
+</html>
