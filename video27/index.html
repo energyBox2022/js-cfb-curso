@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando Formulários com JS</title>
+
+    <style>
+        label{
+            display:block
+        }
+
+        input{
+            display: block;
+        }
+
+        input[type=submit], label{
+            margin-top: 10px;
+        }
+    </style>
+    
+
+</head>
+
+
+<body>
+
+    <form name="curso1" id="icurso1" action="#" method="post">
+        <label>Nome</label>
+        <input type="text" name="fnome" id="iteste" value="primeiro - 1">
+        <label>Senha</label>
+        <input type="password" name="fsenha" id="ifsenha" value="123">
+        <input type="submit" name="btenviar" value="Enviar">
+    </form>
+
+    <form name="curso2" id="icurso2" action="#" method="post">
+        <label>Nome</label>
+        <input type="text" name="fnome" id="iteste" value="primeiro - 2">
+        <label>Senha</label>
+        <input type="password" name="fsenha" id="ifsenha" value="123">
+        <input type="submit" name="btenviar" value="Enviar">
+    </form>
+
+    <script>
+        var fm = document.forms.length;
+        document.write("<br>" + "São " + fm + " formulários." + "<br>" + "<br>");
+
+        var fm1 = document.forms[0].id;
+        document.write("O id do formulário 1 é " + fm1  + "<br>" + "<br>")
+
+        var fm1 = document.forms[0].name;
+        document.write("O name do formulário 1 é " + fm1  + "<br>" + "<br>")
+
+        var fm1 = document.forms.item(0).name; /* O atributo item tb retorna da mesma maneira que o atributo forms*/
+        document.write("O name do formulário 1 é " + fm1  + "<br>" + "<br>")
+
+        var fm1 = document.forms.namedItem("curso1").name; /* O atributo item tb retorna da mesma maneira que o atributo forms*/
+        document.write("O name do formulário 1 é " + fm1  + "<br>" + "<br>")/* Outra maneira de apontar para o formulário*/
+
+        /* Para retornar o fomulário inteiro, faça o uso do innerHTML*/
+
+        var fmr = document.forms.namedItem("curso2").innerHTML; 
+        document.write(fmr)/* Retornará o formulário*/
+
+        /*Abaixo exemplos de como se aponta para um elemento em um formulário:*/
+
+        var fmele = document.forms.namedItem("curso1").elements[0].value; 
+        document.write(fmele)/* Retornará o formulário*/
+        
+        var fmpass = document.forms.namedItem("curso1").elements[1].value; 
+        document.write("<br>" + "<br>" + "A senha é: " + fmpass)/* Retornará o formulário*/
+
+    </script>
+
+    
+</body>
+</html>
