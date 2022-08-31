@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math - Métodos e constantes matemáticas</title>
+
+    <style>
+        body{
+            background-color: beige;
+        }
+
+        h1{
+            color: darkgreen;
+            margin-left: 10px;
+        }
+    </style>
+
+
+</head>
+
+
+<body>
+
+    <h1>Math - Métodos e constantes matemáticas</h1>
+
+    <script>
+
+        /* Para facilitar o uso, pode-se armazenar os valores dos métodos em uma constante*/
+
+        var mt=Math.PI;
+        document.write(mt + "<br>");
+
+        
+        var e=Math.E;
+        document.write(e + "<br>");
+
+        var raiz2=Math.SQRT2;
+        document.write(raiz2 + "<br>");
+
+        var umsobredois=Math.SQRT1_2;
+        document.write(umsobredois + "<br>");
+
+        var valor=10.3;
+        var arrend=Math.ceil(valor);
+        document.write(arrend + "<br>")
+
+        var valor2=10.8;
+        var arrend2=Math.floor(valor2);
+        document.write(arrend2 + "<br>")
+
+        var valor3=10.3;
+        var arrend3=Math.round(valor3);
+        document.write("Este arredondamento é padrão" + arrend3 + "<br>")
+
+        var valor4=10.6;
+        var arrend4=Math.round(valor4);
+        document.write("Este arredondamento é padrão" + arrend4 + "<br>")
+
+        var valor5=4;
+        var arrend5=Math.pow(valor5,2);
+        document.write("Elevou-se o número 4 a 2 resultando em " + arrend5 + "<br>")
+
+        /*Para retornar valores aleatórios, utiliza-se o método random:*/
+
+        var aleatorio=Math.random();
+        document.write("O valor aleatório gerado (entre 0 e 1) foi o " + aleatorio + "<br>");
+
+        var valor6=60;
+        var aleatorio1=Math.random()*valor6;
+        document.write("O valor aleatório gerado (entre 0 e 10) foi o " + aleatorio1 + "<br>");
+
+        var aleatorio2=Math.round(Math.random()*valor6);
+        document.write("O valor aleatório inteiro gerado (entre 0 e 10) foi o " + aleatorio2 + "<br>");
+
+        /*Função para gerar 6 números aleatórios*/
+        for(var i=0; i<6; i++){
+            var aleatorio3=Math.round(Math.random()*valor6);
+            document.write("O valor aleatório inteiro gerado (entre 0 e 10) foi o " + aleatorio3 + "<br>");
+        }
+
+
+
+    </script>
+    
+</body>
+</html>
