@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos Gerais de Javascript</title>
+
+
+    <style>
+        body{
+            background-color: rgb(21, 62, 144);
+        }
+
+        h1{
+            color: rgb(255, 250, 164);
+            color: rgb(14, 73, 181);
+            color: rgb(84, 227, 70);
+            text-align: center;
+        }
+
+        h2,p{
+            color: rgb(255, 250, 164)
+        }
+
+        .space{
+            background-color: rgb(14, 73, 181);
+            padding: 1px 50px 15px 15px;
+            width: 450px;
+            border-radius: 20px;
+            margin: auto;
+            box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.504);
+        }
+
+        #inum30{
+            width: 40px;
+        }
+    </style>
+
+
+
+
+
+</head>
+
+
+<body>
+    <header>
+        <h1>Exemplos Gerais</h1>
+    </header>
+
+    <video30>
+        <div class="space">
+            <h2>Aula 30 - Funções</h2>
+            <p>
+                Digite valores para serem somados: <input type="number" name="num" id="inum30"> <input type="button" value="Adicionar" onclick="somar()">
+            </p>
+            <p>
+                <input type="button" value="Resultado" onclick="resultado()">
+            </p>
+            <p id="res"></p>
+        </div>
+        
+
+        <script>
+                var num = window.document.getElementById(`inum30`)
+                var resp = window.document.getElementById(`res`)
+                var vet = []
+                
+
+            function somar(){
+                vet.push(Number(num.value))
+                num.value = ``
+                num.focus()
+                let soma = 0
+
+                for(let pos in vet){
+                    
+                    soma += vet(pos)
+                }
+            }
+
+            function resultado(){
+                resp.innerHTML = `O resultado é ${soma}.`
+            }
+
+        </script>
+
+    </video30>
+
+
+    
+</body>
+</html>
