@@ -16,10 +16,20 @@
             color: rgb(255, 250, 164);
             color: rgb(14, 73, 181);
             color: rgb(84, 227, 70);
+            color: rgb(255, 119, 95);
             text-align: center;
         }
 
-        h2,p{
+        h3{
+            color: rgb(131, 255, 93);
+        }
+
+        h2{
+            color: aqua;
+            text-align: center;
+        }
+
+        p{
             color: rgb(255, 250, 164)
         }
 
@@ -33,6 +43,10 @@
         }
 
         #inum30{
+            width: 40px;
+        }
+
+        #imed{
             width: 40px;
         }
     </style>
@@ -50,42 +64,120 @@
     </header>
 
     <video30>
-        <div class="space">
-            <h2>Aula 30 - Funções</h2>
-            <p>
-                Digite valores para serem somados: <input type="number" name="num" id="inum30"> <input type="button" value="Adicionar" onclick="somar()">
-            </p>
-            <p>
-                <input type="button" value="Resultado" onclick="resultado()">
-            </p>
-            <p id="res"></p>
-        </div>
+        <section>
+            <div class="space">
+                <soma>
+                    <h2>Aula 30 - Funções</h2>
+                    <h3>Métodos para somas:</h3>
+                    <p>
+                        Digite valores para serem somados: <input type="number" name="num" id="inum30"> <input type="button" value="Adicionar" onclick="adicionar()">
+                    </p>
+                    <p>
+                        <input type="button" value="Método 1" onclick="metodo1()"> <input type="button" value="Algorítimo Método 1" onclick="algoritimo1()"> <input type="button" value="Método 2" onclick="metodo2()"> <input type="button" value="Algorítimo Método 2" onclick="algoritimo2()">
+                    </p>
+                    <p id="res"></p>
+
+
+                    <script>
+                        var num = window.document.getElementById(`inum30`)
+                        var resp = window.document.getElementById(`res`)
+                        var imagem = document.createElement(`img`)
+                        var imagem2 = document.createElement(`img`)
+                        var vet = []
+                        
         
+                    function adicionar(){
+                        vet.push(Number(num.value))
+                        num.value = ``
+                        num.focus()
+                        
+                    }
+        
+                    function metodo1(){
+                        let soma1 = 0
+        
+                        for(let pos in vet){
+                            
+                            soma1 += vet[pos]
+                        }
+                        resp.innerHTML = `Método 1: o resultado é ${soma1}.<br><br>`                
+                    }
+        
+                    function algoritimo1(){
+                        resp.innerHTML += `Algorítimo do Método 1:<br><br>`
+                        imagem.setAttribute(`src`,`algoritimo1_soma.jpg`)
+                        resp.appendChild(imagem)
+                    }
+        
+                    function metodo2(){
+                        let tam = vet.length 
+                        let soma2 = 0
+        
+                        for(var i = 0; i<tam; i++){
+                            soma2 += vet[i]
+                        }
+                        resp.innerHTML += `<br><br>Método 2: o resultado é 
+                        ${soma2}.<br><br>`                
+                    }
+        
+                    function algoritimo2(){
+                        resp.innerHTML += `<br>Algorítimo Método 2:<br><br>`
+                        imagem2.setAttribute(`src`,`algoritimo2_soma.jpg`)
+                        resp.appendChild(imagem2)
+                    }
+        
+                </script>
 
-        <script>
-                var num = window.document.getElementById(`inum30`)
-                var resp = window.document.getElementById(`res`)
-                var vet = []
-                
 
-            function somar(){
-                vet.push(Number(num.value))
-                num.value = ``
-                num.focus()
-                let soma = 0
 
-                for(let pos in vet){
+                </soma>
+
+                <media>                
+                    <h3><br>Métodos para médias:</h3>
+                    <p>Digite valores para cálculo da média: <input type="number" name="med" id="imed"> <input type="button" value="Adicionar" onclick="adicionar2()"></p>
+                    <p>
+                        <input type="button" value="Resultado" onclick="resultado()"> <input type="button" value="Algorítimo" onclick="algoritimo()">
+                    </p>
+                    <p id="res2"></p>
                     
-                    soma += vet(pos)
-                }
-            }
+                    <script>
+                        var num2 = window.document.getElementById(`imed`)
+                        var resp2 = window.document.getElementById(`res2`)
+                        let vet2 = []
+                        var imagem = document.createElement(`img`)
+                        
 
-            function resultado(){
-                resp.innerHTML = `O resultado é ${soma}.`
-            }
+                        function adicionar2(){
+                            vet2.push(Number(num2.value))
+                            num2.value = ``
+                            num2.focus()
+                        }
 
-        </script>
+                        function resultado(){
+                            let tam2 = vet2.length
+                            let soma2 = 0                           
+                            for(let pos2 in vet2){
+                                soma2 += vet2[pos2]
+                                media = soma2/tam2
+                            }
+                            resp2.innerHTML = `Os valores adicionados foram os: ${vet2}<br>`
+                            resp2.innerHTML += `A quantidade de elementos adicionados no vetor
+                            foi de ${tam2}<br>`
+                            resp2.innerHTML += `A soma dos valores adicionados é de: ${soma2}<br>`
+                            resp2.innerHTML += `A média dos valores adicionados é de: ${media}<br><br>`
+                        }
 
+                        function algoritimo(){
+                            resp2.innerHTML += `O algorítimo utilizado foi:<br><br>`
+                            imagem.setAttribute(`src`,`algoritimo1_media.jpg`)
+                            resp2.appendChild(imagem)
+                        }
+                    </script>
+
+                </media>
+            </div>
+        </section>
+        
     </video30>
 
 
