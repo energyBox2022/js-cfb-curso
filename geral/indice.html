@@ -9,32 +9,54 @@
 
     <style>
         body{
-            background-color: rgb(21, 62, 144);
+            background-color: rgb(229, 178, 153);
         }
 
         h1{
             color: rgb(255, 250, 164);
             color: rgb(14, 73, 181);
             color: rgb(84, 227, 70);
-            color: rgb(255, 119, 95);
+            color: rgb(125, 90, 80);
             text-align: center;
         }
 
         h3{
-            color: rgb(131, 255, 93);
+            color: rgb(252, 222, 192);
         }
 
         h2{
-            color: aqua;
+            color: rgb(229, 178, 153);
             text-align: center;
         }
 
         p{
-            color: rgb(255, 250, 164)
+            color: rgb(252, 222, 192);
         }
 
-        .space{
-            background-color: rgb(14, 73, 181);
+        .space30{
+            background-color: rgb(125, 90, 80);
+            padding: 1px 50px 15px 15px;
+            width: 450px;
+            border-radius: 20px;
+            margin: auto;
+            box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.504);
+        }
+
+        .space31{
+            position: relative;
+            top: 25px;
+            background-color: rgb(125, 90, 80);
+            padding: 1px 50px 15px 15px;
+            width: 450px;
+            border-radius: 20px;
+            margin: auto;
+            box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.504);
+        }
+
+        .space32{
+            position: relative;
+            top: 50px;
+            background-color: rgb(125, 90, 80);
             padding: 1px 50px 15px 15px;
             width: 450px;
             border-radius: 20px;
@@ -48,6 +70,12 @@
 
         #imed{
             width: 40px;
+        }
+
+        .evento1{
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
         }
     </style>
 
@@ -65,7 +93,7 @@
 
     <video30>
         <section>
-            <div class="space">
+            <div class="space30">
                 <soma>
                     <h2>Aula 30 - Funções</h2>
                     <h3>Métodos para somas:</h3>
@@ -179,6 +207,51 @@
         </section>
         
     </video30>
+
+    <video31>    
+        <div class="space31">
+            <h2>Aula 31 - Escopo de variáveis</h2>
+
+            <div class="evento1" onmouseover="escopo1(this, `#FB2576`)" onmouseout="escopo1(this, `#332FD0`)"></div>
+
+            <script>
+                    
+
+                function escopo1(caixa,cor){
+                    caixa.style.backgroundColor=cor
+                }
+
+            </script>
+            
+        </div>
+    </video31>
+
+    <video32>    
+        <div class="space32">
+
+
+
+            <h2>Aula 31 - Eventos</h2>
+            <div class="evento1" onmouseover="mudeCor(this,`#B4846C`)" onmouseout="mudeCor(this, `#FCDEC0`)"></div><br>
+            <input type="button" value="Escapuliu" onmouseover="escapuliu(this)">
+
+            <script>
+
+                function mudeCor(caixa,cor){
+                    caixa.style.backgroundColor=cor
+                }
+
+                function escapuliu(obj){
+                    obj.style.position = "absolute"
+                    obj.style.left = Math.random()*200+"px"
+                    obj.style.top = Math.random()*200+"px"
+                }
+            </script>
+
+
+
+        </div>
+    </video32>
 
 
     
