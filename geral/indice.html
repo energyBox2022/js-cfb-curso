@@ -34,6 +34,7 @@
         }
 
         .space30{
+            position: relative;
             background-color: rgb(125, 90, 80);
             padding: 1px 50px 15px 15px;
             width: 450px;
@@ -64,6 +65,41 @@
             box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.504);
         }
 
+        .space33{
+            position: relative;
+            top: 75px;
+            background-color: rgb(125, 90, 80);
+            padding: 1px 50px 15px 15px;
+            width: 450px;
+            border-radius: 20px;
+            margin: auto;
+            box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.504);
+        }
+
+        .space33b{
+            position: relative;
+            top: 100px;
+            background-color: rgb(125, 90, 80);
+            padding: 1px 50px 15px 15px;
+            width: 450px;
+            border-radius: 20px;
+            margin: auto;
+            box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.504);
+        }
+
+        #box33a{
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+
+        #box33b{
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+
+
         #inum30{
             width: 40px;
         }
@@ -77,9 +113,38 @@
             height: 200px;
             border: 1px solid black;
         }
+
     </style>
 
 
+        <script>
+
+            function msg(){
+                alert(`CFB Cursos`) 
+            }
+
+            function cor1(){
+                var obj = window.document.getElementById(`box33a`)//Onde será feita a mudança
+                obj.style.backgroundColor = "#fff"//Comando que realiza a mudança
+            }
+
+            function cor2(){
+                var obj = window.document.getElementById(`box33a`)
+                obj.style.backgroundColor = "#f00"
+            }
+
+            function addEventos(){
+                var obj = window.document.getElementById(`box33a`)
+                obj.addEventListener("click",msg)//Aciona o addEventListener
+                obj.addEventListener("mouseover",cor1)
+                obj.addEventListener("mouseout",cor2)
+            }
+
+            window.addEventListener("load",addEventos)
+
+
+                      
+        </script>
 
 
 
@@ -231,7 +296,7 @@
 
 
 
-            <h2>Aula 31 - Eventos</h2>
+            <h2>Aula 32 - Eventos</h2>
             <div class="evento1" onmouseover="mudeCor(this,`#B4846C`)" onmouseout="mudeCor(this, `#FCDEC0`)"></div><br>
             <input type="button" value="Escapuliu" onmouseover="escapuliu(this)">
 
@@ -252,6 +317,24 @@
 
         </div>
     </video32>
+
+
+    <video33a>
+        <div class="space33">
+            <h2>Aula 33a - addEventListener</h2>
+            <div id="box33a">
+
+            </div>
+        </div>
+    </video33a>
+
+    <video33b>    
+        <div class="space33b">
+            <h2>Aula 33b - addEventListener (Aproveitando código javaScript)</h2>
+            <div id="box33b"></div>
+
+        </div>
+    </video33b>
 
 
     
