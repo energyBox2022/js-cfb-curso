@@ -93,10 +93,13 @@
             border: 1px solid black;
         }
 
-        #box33b{
+        #box34{
             width: 200px;
             height: 200px;
             border: 1px solid black;
+            position: absolute;
+            top: 0px;
+            left: 0px;
         }
 
 
@@ -118,6 +121,8 @@
 
 
         <script>
+
+            /*Aula 33*/
 
             function msg(){
                 alert(`CFB Cursos`) 
@@ -142,6 +147,32 @@
 
             window.addEventListener("load",addEventos)
 
+            /*Aula 34*/
+
+            var px = 0
+            var py = 0
+
+            function move(){
+                var obj = document.getElementById("box4")
+                var tecla = event.keyCode
+
+                if(tecla == 37){
+                    px -= 10
+                    obj.style.left = px + "px"
+                }else if(tecla == 38){
+                    py -= 10
+                    obj.style.top = py + "px"
+                }else if(tecla == 39){
+                    px += 10
+                    obj.style.left = px + "px"
+                }else if(tecla == 40){
+                    py += 10
+                    obj.style.top = py + "px"
+                }
+                
+                document.addEventListener("keydown",move)
+
+            } 
 
                       
         </script>
@@ -321,7 +352,7 @@
 
     <video33a>
         <div class="space33">
-            <h2>Aula 33a - addEventListener</h2>
+            <h2>Aula 33 - addEventListener</h2>
             <div id="box33a">
 
             </div>
@@ -330,8 +361,8 @@
 
     <video33b>    
         <div class="space33b">
-            <h2>Aula 33b - addEventListener (Aproveitando código javaScript)</h2>
-            <div id="box33b"></div>
+            <h2>Aula 34 - addEventListener (Parte 2)</h2>
+            <div id="box34"></div>
 
         </div>
     </video33b>
